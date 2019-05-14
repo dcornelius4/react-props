@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import styles from './ColorPicker.css';
 
 export default class ColorPicker extends PureComponent {
   redButton = () => {
@@ -15,11 +16,11 @@ export default class ColorPicker extends PureComponent {
 
   render() {
     return (
-      <>
-        <button onClick={this.redButton}>Red</button>
-        <button onClick={this.greenButton}>Green</button>
-        <button onClick={this.blueButton}>Blue</button>
-      </>
+      <section className={styles.ColorPicker}>
+        <button onClick={this.redButton} className={styles.red}>Red</button>
+        <button onClick={this.greenButton} className={styles.green}>Green</button>
+        <button onClick={this.blueButton} className={styles.blue}>Blue</button>
+      </section>
     );
   }
 };
